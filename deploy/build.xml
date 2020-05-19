@@ -25,7 +25,7 @@
 			password="${sf.password}" 
 			serverurl="${sf.serverurl}"
 			retrieveTarget="../force-app/main/default"
-			unpackaged="${sf.unpackaged}"
+			unpackaged="../manifest/package.xml"
 			/> 
 	</target>
 
