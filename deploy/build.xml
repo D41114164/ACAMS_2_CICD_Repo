@@ -31,7 +31,7 @@
 
   <target name="DeployCode">
     <!-- <copy file="${sf2.dir}" todir="${sf2.retrieveTarget}" overwrite="true" failonerror="true"/> -->
-    <sf:deploy username="${sf2.username}" password="${sf2.password}" serverurl="${sf.serverurl}"  deployRoot="../force-app/main/default" unpackaged="../manifest/package.xml" trace="true" runAllTests="true"/>
+    <sf:deploy username="${sf2.username}" password="${sf2.password}" serverurl="${sf.serverurl}"  deployRoot="../force-app/main/default" trace="true" runAllTests="true"/>
 	</target>
     
 </project>
