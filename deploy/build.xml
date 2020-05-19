@@ -20,7 +20,7 @@
     <target name="RetrieveCode">
 		<!-- <mkdir dir="src"/> -->
 
-    "${sf.retrieveTarget}"
+    ${sf.retrieveTarget}
 		<sf:retrieve 
 			username="${sf.username}"
 			password="${sf.password}" 
