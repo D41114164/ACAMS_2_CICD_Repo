@@ -35,7 +35,7 @@
 	</target>
 
   <target name="validateTestDeployToProd">
-        <sf:deploy username="${prodSf.username}" password="${prodSf.password}" serverurl="${prodSf.serverurl}" maxPoll="${prodSf.maxPoll}" deployRoot="../src" testLevel="RunLocalTests" rollbackOnError="true" checkOnly="true" />
+        <sf:deploy username="${prodSf.username}" password="${prodSf.password}" serverurl="${prodSf.serverurl}" maxPoll="${prodSf.maxPoll}" deployRoot="../force-app/main/default" testLevel="RunLocalTests" rollbackOnError="true" checkOnly="true" />
   </target>
     
 </project>
