@@ -1,8 +1,8 @@
 <project name="Test_Project" default="RetrieveCode" basedir="." xmlns:sf="antlib:com.salesforce">
 
-    <property file="ant-salesforce.jar"/>
-    <property file="build.properties"/>
-    <property environment="env"/>
+    <property file="/ant-salesforce.jar"/>
+    <property file="/build.properties"/>
+    <property environment="/env"/>
 
     <!-- Setting default value for username, password and session id properties to empty string 
          so unset values are treated as empty. Without this, ant expressions such as ${sf.username}
@@ -25,7 +25,7 @@
 
   <target name="DeployCode">
     <!-- <copy file="${sf2.dir}" todir="${sf2.retrieveTarget}" overwrite="true" failonerror="true"/> -->
-    <sf:deploy username="${sf2.username}" password="${sf2.password}" serverurl="${sf.serverurl}"  deployRoot="${sf.deployTarget}" runAllTests="true"/>
+    <sf:deploy username="${sf2.username}" password="${sf2.password}" serverurl="${sf.serverurl}"  deployRoot="${sf2.deployTarget}" runAllTests="true"/>
 	</target>
     
 </project>
