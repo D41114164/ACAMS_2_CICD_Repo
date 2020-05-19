@@ -25,7 +25,7 @@
 
   <target name="DeployCode">
     <!-- <copy file="${sf2.dir}" todir="${sf2.retrieveTarget}" overwrite="true" failonerror="true"/> -->
-    <sf:deploy username="${sf2.username}" password="${sf2.password}" serverurl="${sf.serverurl}"  deployRoot="${sf.retrieveTarget}" runAllTests="true"/>
+    <sf:deploy username="${sf2.username}" password="${sf2.password}" serverurl="${sf.serverurl}"  deployRoot="${sf.deployTarget}" runAllTests="true"/>
 	</target>
     
 </project>
