@@ -33,5 +33,9 @@
     <!-- <copy file="${sf2.dir}" todir="${sf2.retrieveTarget}" overwrite="true" failonerror="true"/> -->
     <sf:deploy username="${sf2.username}" password="${sf2.password}" serverurl="${sf.serverurl}"  deployRoot="../force-app/main/default" trace="true" runAllTests="true"/>
 	</target>
+
+  <target name="validateTestDeployToProd">
+        <sf:deploy username="${prodSf.username}" password="${prodSf.password}" serverurl="${prodSf.serverurl}" maxPoll="${prodSf.maxPoll}" deployRoot="../src" testLevel="RunLocalTests" rollbackOnError="true" checkOnly="true" />
+  </target>
     
 </project>
