@@ -1,14 +1,7 @@
 <project name="Test_Project" default="RetrieveCode" basedir="." xmlns:sf="antlib:com.salesforce">
-    <!--
-      <property file="ant-salesforce.jar"></property>
-    <property file="build.properties"></property>
-    <property environment="env"></property>
-    -->
 
-    <classpath>
-        <pathelement location="./ant-salesforce.jar" />
-        <pathelement location="./build.properties" />
-    </classpath>
+    <property file="build.properties"/>
+    <property environment="env"/>
 
     <!-- Setting default value for username, password and session id properties to empty string 
          so unset values are treated as empty. Without this, ant expressions such as ${sf.username}
@@ -17,6 +10,12 @@
     <condition property="sf.username" value=""> <not> <isset property="sf.username"/> </not> </condition>
     <condition property="sf.password" value=""> <not> <isset property="sf.password"/> </not> </condition>
     <condition property="sf.sessionId" value=""> <not> <isset property="sf.sessionId"/> </not> </condition>
+
+    <taskdef resource="com/salesforce/antlib.xml" uri="antlib:com.salesforce">
+        <classpath>
+            <pathelement location="./ant-salesforce.jar" />
+        </classpath>
+    </taskdef>
 
     <target name="RetrieveCode">
 		<!-- <mkdir dir="src"/> -->
@@ -31,7 +30,7 @@
 
   <target name="DeployCode">
     <!-- <copy file="${sf2.dir}" todir="${sf2.retrieveTarget}" overwrite="true" failonerror="true"/> -->
-    <sf:deploy username="${sf2.username}" password="${sf2.password}" serverurl="${sf.serverurl}"  deployRoot="${sf2.deployTarget}" runAllTests="true"/>
+    <sf:deploy username="${sf2.username}" password="${sf2.password}" serverurl="${sf.serverurl}"  deployRoot="${sf.retrieveTarget}" runAllTests="true"/>
 	</target>
     
 </project>
