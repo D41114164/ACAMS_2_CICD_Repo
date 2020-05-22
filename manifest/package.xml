@@ -2,6 +2,7 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
 		<members>FIST_CICDSampleCLass</members>
+		<members>FSIT_CICDSampleClassTest</members>
 		<name>ApexClass</name>
 	</types>
 	<version>48.0</version>
